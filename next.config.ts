@@ -9,6 +9,8 @@ const withPWA = withPWAInit({
 });
 
 const nextConfig: NextConfig = {
+  output: "export",
+  basePath: process.env.GITHUB_ACTIONS ? "/weather" : "",
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
